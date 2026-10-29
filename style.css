@@ -151,3 +151,70 @@ a { color: var(--accent-dark); text-underline-offset: 2px; }
   nav ul { gap: 0.15rem 1.1rem; }
   h2 { font-size: 1.2rem; }
 }
+
+/* Quotes page */
+
+.quote-hero {
+  margin: 0 0 2.5rem;
+  padding: 2rem 1.75rem;
+  background: #f5ece0;
+  border-left: 4px solid var(--accent);
+}
+
+.quote-hero__text {
+  margin: 0 0 1rem;
+  font-size: 1.35rem;
+  line-height: 1.4;
+}
+
+.quote-hero__author {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.quote-list {
+  margin: 1.5rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: quote;
+}
+
+.quote-list li {
+  padding: 1.4rem 0;
+  border-top: 1px solid var(--line);
+}
+
+blockquote { margin: 0; }
+
+blockquote p {
+  margin: 0 0 0.6rem;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+blockquote p::before { content: "\201C"; }
+blockquote p::after { content: "\201D"; }
+
+blockquote footer {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+blockquote cite {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.note {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  border-top: 1px solid var(--line);
+  padding-top: 1rem;
+}
