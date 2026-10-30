@@ -218,3 +218,66 @@ blockquote cite {
   border-top: 1px solid var(--line);
   padding-top: 1rem;
 }
+
+/* Projects page */
+
+.idea-list {
+  margin: 2rem 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: idea;
+}
+
+.idea-list > li {
+  counter-increment: idea;
+  position: relative;
+  padding: 1.5rem 0 1.5rem 3rem;
+  border-top: 1px solid var(--line);
+}
+
+.idea-list > li::before {
+  content: counter(idea, decimal-leading-zero);
+  position: absolute;
+  left: 0;
+  top: 1.65rem;
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+}
+
+.idea-list h2 {
+  margin: 0 0 0.35rem;
+  padding-top: 0;
+  border-top: 0;
+  font-size: 1.25rem;
+}
+
+.meta {
+  margin: 0 0 0.75rem;
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+.idea-list p:last-child { margin-bottom: 0; }
+
+.pages {
+  font-family: var(--sans);
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+  border-left: 2px solid var(--line);
+  padding-left: 0.75rem;
+}
+
+.tag {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.1rem 0.45rem;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border-radius: 2px;
+}
