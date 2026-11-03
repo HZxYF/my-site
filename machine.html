@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Machine — Quotes &amp; Machinery</title>
+  <meta name="description" content="A useless machine that switches itself off, and a small game that measures how fast you click.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">Quotes &amp; Machinery</a>
+    <nav aria-label="Primary" data-nav></nav>
+  </header>
+
+  <main id="main">
+    <h1>Machine</h1>
+
+    <p class="lede">
+      Two things that do something when you touch them: a box that refuses to stay on,
+      and a game that times your hand.
+    </p>
+
+    <section class="machine" aria-labelledby="machine-h">
+      <h2 id="machine-h">The useless machine</h2>
+
+      <p>
+        A switch, a box, and an arm inside it. Turn the switch on and the arm comes out
+        and turns it off again. It has no other function. This is the whole point.
+      </p>
+
+      <div class="machine__stage">
+        <div class="machine__box">
+          <button class="switch" type="button" role="switch" aria-checked="false"
+                  id="machine-toggle" aria-describedby="machine-status">
+            <span class="switch__track"><span class="switch__knob"></span></span>
+            <span class="switch__label">Off</span>
+          </button>
+          <div class="machine__arm" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <p id="machine-status" class="status" role="status">
+        The machine is off. It would like to stay that way.
+      </p>
+    </section>
+
+    <section class="game" aria-labelledby="game-h">
+      <h2 id="game-h">The game: how fast are you?</h2>
+
+      <p>
+        Five tries. Press start, wait for the pad to turn green, then click as fast as
+        you can. Clicking early costs you the try.
+      </p>
+
+      <button class="game__pad game__pad--idle" type="button" id="game-pad">
+        Click to start
+      </button>
+
+      <p id="game-status" class="status" role="status">
+        Five tries. Wait for green, then click.
+      </p>
+
+      <p class="game__best">Best: <span id="game-best">—</span></p>
+    </section>
+
+    <p class="note">
+      The machine is based on Marvin Minsky's design: the only job of the device is to
+      stop you from turning it on. The game stores nothing — close the page and the
+      times are gone.
+    </p>
+  </main>
+
+  <footer class="site-footer">
+    <p>Quotes &amp; Machinery — a learning project for Web Technologies 2026.</p>
+  </footer>
+
+  <script src="nav.js" defer></script>
+  <script src="machine.js" defer></script>
+</body>
+</html>
